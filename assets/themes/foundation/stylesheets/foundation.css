@@ -4,7 +4,7 @@
 
 html { font-size: 62.5%; }
 
-body { background: white; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; font-size: 16px; line-height: 1; color: #bbbbbb; position: relative; -webkit-font-smoothing: antialiased; }
+body { background: white; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; font-size: 16px; line-height: 1; color: #222222; position: relative; -webkit-font-smoothing: antialiased; }
 
 /* Links ---------------------- */
 a img { border: none; }
@@ -32,7 +32,7 @@ p a, p a:visited { line-height: inherit; }
 
 .hide-override { display: none !important; }
 
-.highlight { background: #dddddd; }
+.highlight { background: white; }
 
 #googlemap img, object, embed { max-width: none; }
 
@@ -78,7 +78,7 @@ strong, b { font-weight: bold; line-height: inherit; }
 
 small { font-size: 60%; line-height: inherit; }
 
-code { font-weight: bold; background: #dddddd; }
+code { font-weight: bold; background: white; }
 
 /* Lists ---------------------- */
 ul, ol, dl { font-size: 16px; line-height: 1.6; margin-bottom: 17px; list-style-position: outside; }
@@ -603,10 +603,10 @@ ul.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px
 .tabs dt, .tabs li.section-title { color: #b3b3b3; cursor: default; display: block; float: left; font-size: 12px; height: 40px; line-height: 40px; padding: 0; padding-right: 9px; padding-left: 20px; font-weight: normal; width: auto; text-transform: uppercase; }
 .tabs dt:first-child, .tabs li.section-title:first-child { padding: 0; padding-right: 9px; }
 .tabs dd, .tabs li { display: block; float: left; padding: 0; margin: 0; }
-.tabs dd a, .tabs li a { color: white; display: block; font-size: 16px; height: 40px; line-height: 40px; padding: 0px 23.8px; }
+.tabs dd a, .tabs li a { color: #6f6f6f; display: block; font-size: 16px; height: 40px; line-height: 40px; padding: 0px 23.8px; }
 .tabs dd a:focus, .tabs li a:focus { font-weight: bold; color: #ffcc00; }
 .tabs dd.active, .tabs li.active { border-top: 3px solid #ffcc00; margin-top: -3px; }
-.tabs dd.active a, .tabs li.active a { cursor: default; color: #d4d4d4; background: #fff; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; font-weight: bold; }
+.tabs dd.active a, .tabs li.active a { cursor: default; color: #3c3c3c; background: #fff; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; font-weight: bold; }
 .tabs dd:first-child, .tabs li:first-child { margin-left: 0; }
 .tabs.vertical { height: auto; border-bottom: 1px solid #e6e6e6; }
 .tabs.vertical dt, .tabs.vertical dd, .tabs.vertical li { float: none; height: auto; }
@@ -827,7 +827,7 @@ div.progress.round .meter { -webkit-border-radius: 1000px; -moz-border-radius: 1
  Notes: - <nav class="top-bar"> can have .fixed added to make it stick to the top of viewport. Can add .contain-to-grid to top-bar to make it full width but content on grid. - <li class="name"> creates a branding area that can be linked to homepage - Can include text, image or both inside this <li>. - <li class="divider"> creates a divider between nav items, add margins for space - <li class="search"> Needs to hold a <form> which can use .row.collapse and pre/postfix buttons or default type="search"
 */
 /* Element that controls breakpoint, no need to change this ever */
-.top-bar-js-breakpoint { width: 940px !important; visibility: hidden; }
+.top-bar-js-breakpoint { width: 767px !important; visibility: hidden; }
 
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid { width: 100%; background: #222222; }
@@ -1191,7 +1191,7 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   .tooltip { font-size: 14px; line-height: 1.4; padding: 7px 10px 9px 10px; left: 50% !important; max-width: 80% !important; margin-left: -40%; font-size: 110%; }
   .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub { border-color: transparent transparent black transparent; border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent; top: -12px; left: 10px; } }
 /* Topbar Specific Breakpoint that you can customize */
-@media only screen and (max-width: 940px) { .top-bar { margin-bottom: 0; overflow: hidden; height: 45px; background: #222222; /* Override contain to grid stuff for breakpoint */ /* Setting up the sliding area */ /* When the Small Nav is Showing */ }
+@media only screen and (max-width: 767px) { .top-bar { margin-bottom: 0; overflow: hidden; height: 45px; background: #222222; /* Override contain to grid stuff for breakpoint */ /* Setting up the sliding area */ /* When the Small Nav is Showing */ }
   .top-bar .js-generated { display: block; }
   .contain-to-grid .top-bar { width: auto; }
   .top-bar section { left: 0; position: relative; width: auto; -webkit-transition: left 300ms 0; -moz-transition: left 300ms 0; -o-transition: left 300ms 0; transition: left 300ms 0; }
