@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Welcome to Foundation | Banded</title>
+
+    <!-- Included CSS Files (Uncompressed) -->
+    <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+    <!-- Included CSS Files (Compressed) -->
+    <link rel="stylesheet" href="stylesheets/foundation.min.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+
+    <script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="top" class="row contain-to-grid">
+        <nav id="top" class="top-bar">
+            <ul>
+                <li class="name">
+                    <h1><a href="#">Hannes Gruber</a></h1>
+                </li>
+                <li class="toggle-topbar"><a href="#"></a></li>
+            </ul>
+
+            <section>
+                <ul class="left">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+
+                <ul class="right">
+                    <li class="has-dropdown">
+                        <a href="#">Link</a>
+
+                        <ul class="dropdown">
+                            <li><a href="#">Dropdown Link</a></li>
+                            <li><a href="#">Dropdown Link</a></li>
+                            <li><a href="#">Dropdown Link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <!-- End Navigation -->
+    <!-- Header -->
+    <div id="header">
+        <img src="images/header/MountainPlusLake.jpg" />
+        <img src="images/header/MountainPanorama1.jpg" />
+        <img src="images/header/Gipfelkreuz.jpg" />
+        <img src="images/header/MountainPanorama2.jpg" />
+    </div>
+    <!-- End Header -->
+    <div id="content">
+        <div class="row">
+            <div class="twelve columns">
+                <h2>Header</h2>
+
+                <p>Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
+                <hr>
+                <p>Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Footer -->
+
+    <footer id="footer" class="row">
+
+            <div class="six columns">
+                <p>&copy; Copyright no one at all. Go to town.</p>
+            </div>
+
+            <div class="six columns">
+                <ul class="link-list right">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+
+    </footer>
+    <div id="copyright">
+    </div>
+
+    <!-- Included JS Files (Compressed) -->
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/foundation.min.js"></script>
+
+    <!-- Initialize JS Plugins -->
+    <script src="javascripts/app.js"></script>
+
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#header").orbit({
+                animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+                animationSpeed: 600,                // how fast animtions are
+                timer: true,                        // true or false to have the timer
+                resetTimerOnClick: true,           // true resets the timer instead of pausing slideshow progress
+                advanceSpeed: 18000,                 // if timer is enabled, time between transitions
+                pauseOnHover: true,                // if you hover pauses the slider
+                startClockOnMouseOut: true,        // if clock should start on MouseOut
+                startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
+                directionalNav: true,               // manual advancing directional navs
+                captions: true,                     // do you want captions?
+                captionAnimation: 'fade',           // fade, slideOpen, none
+                captionAnimationSpeed: 800,         // if so how quickly should they animate in
+                bullets: false,                     // true or false to activate the bullet navigation
+                bulletThumbs: false,                // thumbnails for the bullets
+                bulletThumbLocation: '',            // location from this file where thumbs will be
+                afterSlideChange: function () { },     // empty function
+                fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
+            });
+        });
+    </script>
+
+</body>
+</html>
