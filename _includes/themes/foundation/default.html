@@ -32,9 +32,14 @@
 </head>
 <body>
     <!-- Navigation -->
-    <div id="top" class="row contain-to-grid">
+	<div class="row contain-to-grid show-for-touch">
+		<a href="{{ BASE_PATH }}/">Hannes Gruber</a>&nbsp;&nbsp;&nbsp;
+        <a href="{{ BASE_PATH }}/blog.html">Blog</a>&nbsp;&nbsp;&nbsp;
+        <a href="{{ BASE_PATH }}/contact.html">Contact</a>&nbsp;&nbsp;&nbsp;
+	</div>
+    <div id="top" class="row contain-to-grid hide-for-touch">
         <nav id="top" class="top-bar">
-            <ul class="show-for-small">
+            <ul class="name show-for-small">
                 <li><a href="#">grubers.info</a></li>
                 <li class="toggle-topbar"><a href="#"></a></li>
             </ul>
@@ -73,9 +78,7 @@
                 </ul>
 
                 <ul class="right">
-                    <li>
-                        <a href="{{ BASE_PATH }}/contact.html">Contact</a>
-                    </li>
+                    <li><a href="{{ BASE_PATH }}/contact.html">Contact</a></li>
                 </ul>
             </section>
         </nav>
