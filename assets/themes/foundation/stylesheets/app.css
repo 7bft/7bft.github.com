@@ -33,6 +33,15 @@ h2, h3, h4, h5, h6 {
 #top li h1 {
     color: #ffcc00;
 }
+/* ----------------------------------------- */
+/* Fixes for mobile small menu which contains to large fonts out of the box */
+#top li h5 a {
+	font-size: 13px;
+}
+.top-bar ul > li.has-dropdown.moved > .dropdown li:not(.title) a {
+    font-size: 13px;
+}
+/* ----------------------------------------- */
 #header {
     background: none repeat scroll 0 0 #222222;
 }

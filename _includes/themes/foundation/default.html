@@ -34,35 +34,36 @@
     <!-- Navigation -->
     <div id="top" class="row contain-to-grid">
         <nav id="top" class="top-bar">
-            <!--ul>
-                <li class="name">
-                    <a style="font-size: 17px;" href="{{ BASE_PATH }}/">Home</a>
-                </li>
-            </ul-->
+            <ul class="show-for-small">
+                <li><a href="#">grubers.info</a></li>
+                <li class="toggle-topbar"><a href="#"></a></li>
+            </ul>
+
             <section>
                 <ul class="left">
-                    <li class="has-dropdown"><a href="{{ BASE_PATH }}/">About Me</a>
-                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="{{ BASE_PATH }}/">Hannes Gruber</a></h5></li>
-                            <li><a title="Hannes Gruber"  href="{{ BASE_PATH }}/">Hannes Gruber</a></li>
+                    <li class="has-dropdown">
+						<a href="{{ BASE_PATH }}/">Hannes Gruber</a>
+                        <ul class="dropdown">
+                            <li><a title="Hannes Gruber"  href="{{ BASE_PATH }}/">About Me</a></li>
                             <li><a title="Professional Experience" href="{{ BASE_PATH }}/professionalexperience.html">Professional Experience</a></li>
                             <li><a title="Education" href="{{ BASE_PATH }}/education.html">Education</a></li>
-                          </ul>
+                        </ul>
 					</li>
                     <li class="has-dropdown">
-                          <a href="{{ BASE_PATH }}/blog.html">Blog</a>
-                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="{{ BASE_PATH }}/blog.html">Blog</a></h5></li>
+                        <a href="{{ BASE_PATH }}/blog.html">Blog</a>
+                        <ul class="dropdown">
                             <li><a title="View Blog Archive"  href="{{ BASE_PATH }}/archive.html">Archive</a></li>
                             <li><a title="View Blog Categories" href="{{ BASE_PATH }}/categories.html">Category</a></li>
                             <li><a title="View Blog Tags" href="{{ BASE_PATH }}/tags.html">Tags</a></li>
-                          </ul>
+                        </ul>
                     </li>
                     <li class="has-dropdown">
-                          <a href="#">Social</a>
-                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                        <a href="#">Social</a>
+                        <ul class="dropdown">
                             <li><a target="_blank" title="Go to github.com/7bft"  href="https://github.com/7bft">Github</a></li>
                             <li><a target="_blank" title="Go to twitter.com/7bft" href="https://twitter.com/7bft">Twitter</a></li>
                             <li><a target="_blank" title="Go to linkedin.com/in/hannesgruber" href="http://at.linkedin.com/in/hannesgruber/">LinkedIn</a></li>
-                          </ul>
+                        </ul>
                     </li>
 					<!--
 					{ % assign pages_list = site.pages % }
@@ -90,7 +91,7 @@
     <!-- End Header -->
 	{{ content }}
     <footer id="footer" class="row">
-		<div class="six columns">
+		<div class="seven columns">
 			<p>
 				&copy; {{ site.author.name }} 2013. 
 				Using <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
@@ -98,7 +99,7 @@
 			  <span style="font-size: 19px">&nbsp;</span>
 			</p>
 		</div>
-		<div class="six columns" style="text-align: right;">
+		<div class="five columns" style="text-align: right;">
 			<p style="padding-top: 0px">
 				<a style="padding-right: 5px;" href="/impressum.html">Impressum</a>
 				<a style="padding-right: 5px;" href="/contact.html">Contact</a>
