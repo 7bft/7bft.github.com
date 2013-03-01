@@ -67,6 +67,7 @@ h2, h3, h4, h5, h6 {
     text-align: center;
 }
 #slideshow img { display: none; }
+#slideshow img.first { display: block; width: 100%; }
 
 #slideshow.orbit { background: none; margin-bottom: 0px; }
 #slideshow.orbit img { display: block; }
