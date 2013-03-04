@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+    {% if page.description %}
+	<meta name="description" content="{{ page.title }} - {{ page.description }}">
+	{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <!-- Included CSS Files (Compressed) -->
+    <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/stylesheets/app.css" rel="stylesheet" type="text/css"
+        media="all">
+    <script src="{{ ASSET_PATH }}/javascripts/modernizr.foundation.js"></script>
+    <!-- TODO -->
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/stylesheets/social_foundicons.css">
+    <!-- Favorite Icon and Touch Icons -->
+    <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+</head>
+<body>
+    <!-- Navigation -->
+	<div id="top-touch" class="row show-for-touch">
+		<div class="twelve columns">
+		<a href="{{ BASE_PATH }}/">Hannes Gruber</a>&nbsp;&nbsp;&nbsp;
+        <a href="{{ BASE_PATH }}/blog.html">Blog</a>&nbsp;&nbsp;&nbsp;
+        <a href="{{ BASE_PATH }}/contact.html">Contact</a>&nbsp;&nbsp;&nbsp;
+		</div>
+	</div>
+    <div id="top" class="row contain-to-grid hide-for-touch">
+        <nav id="top" class="top-bar">
+            <ul class="name show-for-small">
+                <li><a href="#">grubers.info</a></li>
+                <li class="toggle-topbar"><a href="#"></a></li>
+            </ul>
+
+            <section>
+                <ul class="left">
+                    <li class="has-dropdown">
+						<a href="{{ BASE_PATH }}/">Hannes Gruber</a>
+                        <ul class="dropdown">
+                            <li><a title="Hannes Gruber"  href="{{ BASE_PATH }}/">About Me</a></li>
+                            <li><a title="Professional Experience" href="{{ BASE_PATH }}/professional-experience.html">Professional Experience</a></li>
+                            <li><a title="Education" href="{{ BASE_PATH }}/education.html">Education</a></li>
+                        </ul>
+					</li>
+                    <li class="has-dropdown">
+                        <a href="{{ BASE_PATH }}/blog.html">Blog</a>
+                        <ul class="dropdown">
+                            <li><a title="View Blog Archive"  href="{{ BASE_PATH }}/archive.html">Archive</a></li>
+                            <li><a title="View Blog Categories" href="{{ BASE_PATH }}/categories.html">Category</a></li>
+                            <li><a title="View Blog Tags" href="{{ BASE_PATH }}/tags.html">Tags</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">Social</a>
+                        <ul class="dropdown">
+                            <li><a target="_blank" title="Go to facebook.com/7bftdotcom" href="http://www.facebook.com/7bftdotcom">Facebook</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/7bft" href="https://twitter.com/7bft">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/in/hannesgruber" href="http://at.linkedin.com/in/hannesgruber/">LinkedIn</a></li>
+                            <li><a target="_blank" title="Go to xing.com/profile/Hannes_Gruber4"  href="https://www.xing.com/profile/Hannes_Gruber4">Xing</a></li>
+                        </ul>
+                    </li>
+					<!--
+					{ % assign pages_list = site.pages % }
+					{ % assign group = 'navigation' % }
+					{ % include JB/pages_list % }
+					-->
+                </ul>
+
+                <ul class="right">
+                    <li><a href="{{ BASE_PATH }}/contact.html">Contact</a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <!-- End Navigation -->
+    <!-- slideshow -->
+    <div id="slideshow">
+        <img src="{{ ASSET_PATH }}/images/header/MountainPanorama1.jpg" class="first" />
+        <img src="{{ ASSET_PATH }}/images/header/MountainPlusLake.jpg" />
+        <img src="{{ ASSET_PATH }}/images/header/Gipfelkreuz.jpg" />
+        <img src="{{ ASSET_PATH }}/images/header/MountainPanorama2.jpg" />
+    </div>
+    <!-- End Header -->
+	{{ content }}
+    <footer id="footer" class="row">
+		<div class="eight columns">
+			<p>
+				&copy;<span style="font-size: 19px">&nbsp;</span>{{ site.author.name }} 2013. 
+				Using <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+			  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+			  
+			</p>
+		</div>
+		<div class="four columns" style="text-align: right;">
+			<p style="padding-top: 0px">
+				<a style="padding-right: 5px;" href="/impressum.html">Impressum</a>
+				<a style="padding-right: 5px;" href="/contact.html">Contact</a>
+				<a title="Go to facebook.com/7bftdotcom" target="_blank" href="https://www.facebook.com/7bftdotcom"><i class="social foundicon-facebook"></i></a>
+				<a title="Go to twitter.com/7bft" target="_blank" href="https://twitter.com/7bft"><i class="social foundicon-twitter"></i></a>
+				<!--a title="Go to github.com/7bft" target="_blank" href="https://github.com/7bft"><i class="social foundicon-github"></i></a-->
+				<a title="Go to linkedin.com/hannesgruber" target="_blank" href="http://at.linkedin.com/in/hannesgruber"><i class="social foundicon-linkedin"></i></a>
+				<a target="_blank" title="Go to xing.com/profile/Hannes_Gruber4"  href="https://www.xing.com/profile/Hannes_Gruber4"><i class="social foundicon-thumb-up"></i></a>
+				<!--a title="Go to flickr.com/" target="_blank" href="http://www.flickr.com/"><i class="social foundicon-flickr"></i></a-->
+			</p>
+		</div>
+    </footer>
+    {% include JB/analytics %}
+    <!-- Included JS Files (Compressed) -->
+    <script src="{{ ASSET_PATH }}/javascripts/jquery-1.9.0.min.js"></script>
+    <script src="{{ ASSET_PATH }}/javascripts/foundation.min.js"></script>
+    <!-- Initialize JS Plugins -->
+    <script src="{{ ASSET_PATH }}/javascripts/app.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#slideshow").orbit({
+                animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+                animationSpeed: 600,                // how fast animtions are
+                timer: true,                        // true or false to have the timer
+                resetTimerOnClick: true,           // true resets the timer instead of pausing slideshow progress
+                advanceSpeed: 18000,                 // if timer is enabled, time between transitions
+                pauseOnHover: true,                // if you hover pauses the slider
+                startClockOnMouseOut: true,        // if clock should start on MouseOut
+                startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
+                directionalNav: true,               // manual advancing directional navs
+                captions: true,                     // do you want captions?
+                captionAnimation: 'fade',           // fade, slideOpen, none
+                captionAnimationSpeed: 800,         // if so how quickly should they animate in
+                bullets: false,                     // true or false to activate the bullet navigation
+                bulletThumbs: false,                // thumbnails for the bullets
+                bulletThumbLocation: '',            // location from this file where thumbs will be
+                afterSlideChange: function () { },     // empty function
+                fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var disqus_shortname = 'hannesgruber';
+        var disqus_identifier = '{{ page.url }}';
+        var disqus_url = 'http://grubers.info{{ page.url }}';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        } ());
+    </script>
+</body>
+</html>

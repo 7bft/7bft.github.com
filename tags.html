@@ -6,18 +6,16 @@ group: navigation
 ---
 {% include JB/setup %}
 
+<div class="button-bar">
+  <ul class="button-group">
 {% assign tags_list = site.tags %}  
-{% if tags_list.first[0] == null %}
-	{% for tag in tags_list %} 
-	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">[{{ tag }} : <span>{{ site.tags[tag].size }}</span>]</a>&nbsp;&nbsp;&nbsp;
-	{% endfor %}
-{% else %}
-	{% for tag in tags_list %} 
-	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">[{{ tag[0] }} : <span>{{ tag[1].size }}</span>]</a>&nbsp;&nbsp;&nbsp;
-	{% endfor %}
-{% endif %}
-
-<hr/>
+{% for tag in tags_list %} 
+    	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref" class="tiny button">
+    		{{ tag[0] }} : {{ tag[1].size }}
+    	</a></li>
+{% endfor %}
+	</ul>
+</div>
 
 {% for tag in site.tags %} 
 	<h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>

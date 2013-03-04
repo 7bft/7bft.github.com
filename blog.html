@@ -1,10 +1,43 @@
 ---
 layout: page
-title : Archive
-header : Post Archive
+header : Blog
 group: navigation
 ---
-{% include JB/setup %}
 
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+
+{% for post in site.posts  %}
+<div id="content">
+
+	<div class="row">
+		<div class="twelve columns">
+			<h1>{{ post.title }}</h1>
+			{% if post.tagline %} 
+			<h4 class="subheader">{{ post.tagline }}</h4>
+			{% else if post.description %}
+            <h4 class="subheader">{{ post.description }}</h4>
+			{% endif %}
+			<h6 style="margin-top: -0.5em; margin-bottom: 2em;">Posted by {{ site.author.name }} on {{ post.date | date: "%B %e, %Y" }}</h6>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns">
+			{{ post.content }}
+		</div>
+	</div>
+	<div class="row" style="margin-top: 3em;">
+		<div class="eight columns">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="7bft">Tweet</a>
+		</div>
+		<div class="two columns">
+			<ul class="pagination">
+			  <li class=""><a href="/archive.html">Archive</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns">
+		<hr style="border-color: #6f6f6f; border-width: 2px 0 0; margin: 0px 0 10px;">
+		</div>
+	</div>
+</div>
+{% endfor %}
