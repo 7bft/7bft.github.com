@@ -76,6 +76,14 @@ hr {
 #slideshow.orbit { background: none; margin-bottom: 0px; }
 #slideshow.orbit img { display: block; }
 
+label {
+	color: #ffffff;
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea { 
+    background-color: #444444;
+    border: 1px solid #6F6F6F;
+}
+
 #footer {
     /* background: none repeat scroll 0 0 #3F3F3F; */
     /*color: #FFFFFF;*/
