@@ -37,6 +37,9 @@ hr {
 	border-color: #6f6f6f; 
 	border-width: 2px 0 0;
 }
+blockquote p {
+	margin-bottom: 8px;
+ }
 /* ----------------------------------------- */
 /* Fixes for mobile small menu which contains to large fonts out of the box */
 #top li h5 a {
