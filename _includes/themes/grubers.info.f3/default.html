@@ -7,7 +7,7 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <head>
-	{% if page.og_type == 'blog' %}
+	{% if page.og_type == 'article' %}
 	{% assign page_sitename = "Hannes Gruber's Blog" %}
 	{% else %}
 	{% assign page_sitename = "Hannes Gruber's Personal Page" %}
@@ -33,6 +33,10 @@
 	<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}Hannes Gruber, come visit my personal page. Teamlead @ bwinparty, Skiing, Mountainbiking, Hiking, Father, Husband{% endif %}"/>
 	<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}"/>
 	<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}{{ page_header }}{% endif %}"/>
+	{% if page.og_type == 'article' %}
+	<meta property="og:article.author" content="{{ site.author.name }}"/>
+	{% endif %}
+	
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/stylesheets/app.css" rel="stylesheet" type="text/css"
