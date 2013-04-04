@@ -7,29 +7,32 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <head>
-    {% if page.header %}
-    <title>{{ page.header }}</title>
+	{% if page.og_type == 'blog' %}
+	{% assign page_sitename = "Hannes Gruber's Blog" %}
 	{% else %}
-    <title>{{ page.title }}</title>
+	{% assign page_sitename = "Hannes Gruber's Personal Page" %}
 	{% endif %}
+	{% if page.header %}
+	{% assign page_header = page.header %}
+	{% else %}
+	{% capture page_header %}{{ page_sitename }} - {{ page.title }}{% endcapture %}
+	{% endif %}
+	
+    <title>{{ page_header }}</title>
     <meta charset="utf-8" />
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
     {% if page.description %}
-	<meta name="description" content="{{ page.title }} - {{ page.description }}">
+	<meta name="description" content="{{ page_header }} - {{ page.description }}">
 	{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 	<!-- Facebook Open Graph -->
 	<meta property="og:image" content="http://grubers.info{{ ASSET_PATH }}/images/FaceBookOpenGraph.jpg"/>
-	<meta property="og:site_name" content="Hannes Gruber's Personal Page"/>
-	<meta property="og:url" content="http://grubers.info"/>
-	<meta property="og:description" content="Hannes Gruber, come visit my personal page. Teamlead @ bwinparty, Skiing, Mountainbiking, Hiking, Father, Husband"/>
-	<meta property="og:type" content="website"/>
-    {% if page.header %}
-	<meta property="og:title" content="{{ page.header }}"/>
-	{% else %}
-	<meta property="og:title" content="{{ page.title }}"/>
-	{% endif %}
+	<meta property="og:site_name" content="{{ page_sitename }}"/>
+	<meta property="og:url" content="http://grubers.info{{ page.url }}"/>
+	<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}Hannes Gruber, come visit my personal page. Teamlead @ bwinparty, Skiing, Mountainbiking, Hiking, Father, Husband{% endif %}"/>
+	<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}"/>
+	<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}{{ page_header }}{% endif %}"/>
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/stylesheets/app.css" rel="stylesheet" type="text/css"
