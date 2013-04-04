@@ -22,6 +22,7 @@
     <meta charset="utf-8" />
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="{{ site.author.name }}">
     {% if page.description %}
 	<meta name="description" content="{{ page_header }} - {{ page.description }}">
 	{% endif %}
@@ -32,11 +33,6 @@
 	<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}Hannes Gruber, come visit my personal page. Teamlead @ bwinparty, Skiing, Mountainbiking, Hiking, Father, Husband{% endif %}"/>
 	<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}"/>
 	<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}{{ page_header }}{% endif %}"/>
-	{% if page.og_type == 'article' %}
-	<meta property="article.author" content="http://grubers.info"/>
-	{% else %}
-    <meta name="author" content="{{ site.author.name }}">
-	{% endif %}
 	
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
