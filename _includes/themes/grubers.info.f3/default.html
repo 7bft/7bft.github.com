@@ -25,7 +25,7 @@
     {% if page.description %}
 	<meta name="description" content="{{ page_header }} - {{ page.description }}">
 	{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
+    <meta name="author" property="article.author" content="{{ site.author.name }}">
 	<!-- Facebook Open Graph -->
 	<meta property="og:image" content="http://grubers.info{{ ASSET_PATH }}/images/FaceBookOpenGraph.jpg"/>
 	<meta property="og:site_name" content="{{ page_sitename }}"/>
@@ -33,9 +33,6 @@
 	<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}Hannes Gruber, come visit my personal page. Teamlead @ bwinparty, Skiing, Mountainbiking, Hiking, Father, Husband{% endif %}"/>
 	<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}"/>
 	<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}{{ page_header }}{% endif %}"/>
-	{% if page.og_type == 'article' %}
-	<meta property="og:article.author" content="{{ site.author.name }}"/>
-	{% endif %}
 	
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
