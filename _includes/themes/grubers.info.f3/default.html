@@ -34,8 +34,9 @@
 	<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% else %}{{ page_header }}{% endif %}"/>
 	{% if page.og_type == 'article' %}
 	<meta property="article.author" content="http://grubers.info"/>
-	{% endif %}
+	{% else %}
     <meta name="author" content="{{ site.author.name }}">
+	{% endif %}
 	
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
