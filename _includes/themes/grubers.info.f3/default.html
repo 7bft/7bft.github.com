@@ -19,6 +19,15 @@
 	<meta name="description" content="{{ page.title }} - {{ page.description }}">
 	{% endif %}
     <meta name="author" content="{{ site.author.name }}">
+	<!-- Facebook Open Graph -->
+	<meta property="og:image" content="{{ ASSET_PATH }}/images/FaceBookOpenGraph.jpg"/>
+	<meta property="og:site_name" content="Hannes Gruber's Personal Page"/>
+	<meta property="og:type" content="website"/>
+    {% if page.header %}
+	<meta property="og:title" content="{{ page.header }}"/>
+	{% else %}
+	<meta property="og:title" content="{{ page.title }}"/>
+	{% endif %}
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/stylesheets/app.css" rel="stylesheet" type="text/css"
