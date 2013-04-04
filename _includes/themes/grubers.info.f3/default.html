@@ -25,7 +25,6 @@
     {% if page.description %}
 	<meta name="description" content="{{ page_header }} - {{ page.description }}">
 	{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
 	<!-- Facebook Open Graph -->
 	<meta property="og:image" content="http://grubers.info{{ ASSET_PATH }}/images/FaceBookOpenGraph.jpg"/>
 	<meta property="og:site_name" content="{{ page_sitename }}"/>
@@ -36,6 +35,7 @@
 	{% if page.og_type == 'article' %}
 	<meta property="article.author" content="http://grubers.info"/>
 	{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
 	
     <!-- Included CSS Files (Compressed) -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
